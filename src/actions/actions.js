@@ -1,5 +1,5 @@
-export const addFeature = () => {
-    return {type: "ADD_FEATURE"};
+export const addFeature = (state) => {
+    return {type: "ADD_FEATURE", payload: state.car.feature };
 };
 
 export const removeFeature = () => {
