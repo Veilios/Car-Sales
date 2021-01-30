@@ -1,4 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
+const buyFeature = feature = {
+  
+};
+
 
 const AddedFeature = props => {
   return (
@@ -9,5 +15,6 @@ const AddedFeature = props => {
     </li>
   );
 };
+
 
 export default AddedFeature;
