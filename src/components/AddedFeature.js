@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const buyFeature = feature = {
+// const buyFeature = feature = {
   
-};
+// };
 
 
 const AddedFeature = props => {

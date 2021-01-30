@@ -5,14 +5,15 @@ import { addFeature } from '../actions';
 
 const AdditionalFeature = props => {
 
-  const buyFeature = feature => {
-    addFeature(feature);
+  const handleAddFeature = e => {
+    e.preventDefault();
+    addFeature(props.feature);
   };
 
   return (
     <li>
       {/* Add an onClick that will let you add a feature to your car */}
-      <button onClick={() => buyFeature(props.feature)} className="button">Add</button>
+      <button onClick={() => handleAddFeature} className="button">Add</button>
       {props.feature.name} (+{props.feature.price})
     </li>
   );

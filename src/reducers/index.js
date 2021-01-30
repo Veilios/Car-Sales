@@ -18,12 +18,5 @@ const initialState = {
 };
 
 export const Reducer = (state = initialState, action) => {
-    switch(action.type) {
-      case ADD_FEATURE: 
-        return !state.car.features.includes(action.payload) ? {
-          ...state,
-          additionalPrice: state.additionalPrice + action.payload.price,
-          car: { ...state, features: [...state.car.features, action.payload]}
-        } : state;
-    }
+  return state
 };
