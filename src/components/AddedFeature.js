@@ -1,16 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-// const buyFeature = feature = {
-  
-// };
-
 
 const AddedFeature = props => {
   return (
     <li>
       {/* Add an onClick to run a function to remove a feature */}
-      <button onClick={() => {}} className="button">X</button>
+      <button onClick={() => props.returnFeature()} className="button">X</button>
       {props.feature.name}
     </li>
   );
