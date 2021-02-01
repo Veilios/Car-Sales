@@ -21,12 +21,14 @@ export const Reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_FEATURE: return {
       ...state,
-      car: {...state.car, features: [...state.car.features, action.payload]},
-      additionalPrice: state.additionalPrice + action.payload.additionalPrice
-    }
+      car: {...state.car, features: [...state.car.features, action.payload1]},
+      additionalPrice: state.additionalPrice + action.payload2
+    };
     case REMOVE_FEATURE: return {
-      ...state
-    }
+      ...state,
+      car: {...state.car, features: state.car.features.filter(item => item.id !== action.payload1)},
+      additionalPrice: state.additionalPrice - action.payload2
+    };
     default: return state;
   }
 };
